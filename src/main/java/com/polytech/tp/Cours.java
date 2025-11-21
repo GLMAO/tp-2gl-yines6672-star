@@ -23,6 +23,13 @@ public class Cours implements ICours {
         this.necessiteProjecteur = necessiteProjecteur;
     }
 
+    /**
+     * Convenience factory to obtain a `CoursBuilder` for fluent construction.
+     */
+    public static CoursBuilder builder() {
+        return new CoursBuilder();
+    }
+
     @Override
     public String getDescription() {
         return "Cours de " + matiere + " avec " + enseignant + " (" + salle + ")";
